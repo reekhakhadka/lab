@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loksewa Application Form</title>
+    <link rel="stylesheet" href="css/loksewaform.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Loksewa Application Form</h2>
+        <form action="#" method="POST">
+            <!-- Full Name -->
+            <label for="name">Full Name:</label>
+            <label for ="first name">first name
+            <input type="text" id="name" name="name" required placeholder="Enter your first name">
+            <label for ="middle name">middle name
+            <input type="text" id="name" name="name" required placeholder="Enter your middle name"></label>
+            <label for ="last name">last name
+            <input type="text" id="name" name="name" required placeholder="Enter your last name">
+            
+            <label for="address"><address></address>Address:</label>
+            <label for="address"><address></address>permanent Address</label>
+            <input type="text" id="address" name="permanent address" required placeholder="Enter your permanent address">
+            <label for="address"><address></address>temporary Address</label>
+            <input type="text" id="address" name="temporary address" required placeholder="Enter your temporary address">
+           
+            <!-- Gender -->
+            <label for="gender">Gender:</label>
+            <div class="gender-options">
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="other">Other</label>
+                <input type="radio" id="other" name="gender" value="other">
+            </div>
+
+            <!-- Date of Birth -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <!-- Contact Details -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <!-- Educational Qualification -->
+            <label for="qualification">Highest Qualification:</label>
+            <select id="qualification" name="qualification">
+                <option value="highschool">High School</option>
+                <option value="bachelor">Bachelor's Degree</option>
+                <option value="master">Master's Degree</option>
+                <option value="phd">PhD</option>
+            </select>
+
+            <!-- Upload Document -->
+            <label for="document">Upload Supporting Document:</label>
+            <input type="file" id="document" name="document" required>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>
