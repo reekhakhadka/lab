@@ -1,0 +1,76 @@
+/* universal */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* type/element */
+h1{
+    text-align: left;
+    color: red;
+}
+
+fieldset{
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+}
+
+legend{
+    text-align: center;
+}
+/* class selector */
+div.form-group{
+    border-bottom: 1px solid rgb(39, 37, 37);
+    padding: 10px;
+}
+div.form-group input{
+    border: 1px solid orangered;
+}
+/* pseduo child selector */
+div.form-group:last-child{
+    border-bottom:none;
+}
+/* decendent child selector */
+div.form-group label{
+    width: 100px;
+    display: inline-block;
+}
+/* group selector */
+div.form-group input,select,textarea{
+    width: 70%;
+}
+/* attribute selector */
+div.form-group input[type=radio]{
+    width: 5%;
+}
+
+
+div.form-group input[type=checkbox]{
+    width: 5%;
+}
+
+div.form-group.btn input{
+    width: 20%;
+    padding: 5px 0;
+    border: none;
+    color: white;
+}
+
+div.form-group input[type=submit]{
+    background-color: rgb(8, 89, 238);
+}
+
+div.form-group input[type=reset]{
+    background-color: rgb(240, 46, 17);
+
+}
+
+/* div.form-group label span{
+    color: red;
+} */
+/* pseduo element selector */
+div.form-group label.require::after{
+    content: "*";
+    color: red;
+}
