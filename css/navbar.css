@@ -1,0 +1,45 @@
+body{
+    margin: 0 auto;
+    padding: 50px;
+    font-family: Arial;
+}
+nav{
+    background-color: yellow;
+    padding: 10px 0;
+}
+.navbar{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.navbar li{
+    margin: 0 15px;
+    position: relative;
+}
+.navbar li a{
+    text-decoration: none;
+    color: purple;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+}
+.navbar li a.active{
+    background-color: blue;
+    color: white;
+}
+.navbar li a:not(.active){
+transition:background-color 0.3s, color 0.3s
+}
+.navbar li a:hover:not(.active){
+    color: black;
+}
+.navbar li:not(:last-child)::after{
+content: "|";
+position: absolute;
+right: -15px;
+top: 30%;
+transform: translate(-50%);
+color: purple;
+}
