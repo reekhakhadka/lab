@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+ }
+
+ body {
+    background-color: #f0f0f0;
+ }
+
+ .navbar {
+    background-color: #0c2d50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+ }
+
+ .navbar .logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+ }
+
+ .menu {
+    list-style: none;
+    display: flex;
+ }
+
+ .menu li {
+    margin: 0 10px;
+ }
+
+ .menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    display: block;
+ }
+
+ .menu li a:hover {
+    background-color: #1a466d;
+    border-radius: 5px;
+ }
+
+ .menu-toggle {
+    display: none;
+    background-color: #0c2d50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+ }
+
+ .hamb-icon {
+    color: white;
+    background-color: transparent;
+ }
+
+ @media (max-width: 768px) {
+    .menu {
+       display: none;
+       flex-direction: column;
+       width: 100%;
+       background-color: #0c2d50;
+       position: absolute;
+       top: 50px;
+       left: 0;
+       text-align: center;
+    }
+
+    .menu.active {
+       display: flex;
+    }
+
+    .menu li {
+       margin: 10px 0;
+    }
+
+    .menu-toggle {
+       display: block;
+    }
+ }

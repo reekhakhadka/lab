@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin-left: 10px;
+    width: 100%;
+    margin: auto;
+    border: 1px solid #eee;
+    padding: 70px 78px;
+    box-shadow: 0 0 10px;
+    line-height: 22px;
+    color: black;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.logo {
+    width: 200px;
+    height: 150px;
+    display: flex;
+}
+.company-info {
+    margin-left: 20px;
+    flex-grow: 20;
+}
+.invoice-info {
+    text-align: right;
+}
+.bill-ship {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.bill-to, .ship-to {
+    width: 48%;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.total-calculation {
+    text-align: right;
+}
+.total-calculation div {
+    margin-bottom: 5px;
+}
