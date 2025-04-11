@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.faculty-list {
+    list-style-type: none;
+    padding: 0;
+}
+.faculty {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.faculty h2 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+}
+.programs {
+    padding: 15px;
+    list-style-type: none;
+    margin: 0;
+}
+.program {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+.programs li {
+    background-color: #e2f1e1;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.faculty h3 {
+    color: #4CAF50;
+}
