@@ -1,0 +1,49 @@
+body{
+    font-family: Arial;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.Group{
+    background: #fff;
+    border-radius: 1opx;
+    padding: 20px;
+    width: 800px;
+}
+.header{
+    text-align: center;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.header h1, .header h2, .header h3, .header p{
+    margin: 5px 0;
+
+}
+.logo img{
+    width: 100px;
+    height: auto;
+}
+.group-container, .feild{
+    margin-bottom: 20px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.last p, .right p{
+    margin: 5px 0;
+}
+.last, .right{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.total{
+    text-align: left;
+    margin-top: 20px;
+}

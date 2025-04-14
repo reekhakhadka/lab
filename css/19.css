@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    color: #fff;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .register-form, .login-form {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .register-form h3,
+  .login-form h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  small {
+    color: #ccc;
+    font-size: 12px;
+  }
+  
+  .gender {
+    margin: 10px 0;
+  }
+  
+  .gender label {
+    margin-right: 10px;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .submit-btn {
+    background-color: #f4b400;
+  }
+  
+  .login-btn {
+    background-color: #f4b400;
+  }

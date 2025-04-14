@@ -1,85 +1,136 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html lang="ne">
 <head>
-    <title>Loksewa Aayog User Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 350px;
-        }
-        h2 {
-            text-align: center;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin-top: 10px;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        button:hover {
-            background: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>लोक सेवा फारम</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-container {
+      max-width: 700px;
+      margin: 30px auto;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Loksewa Aayog User Form</h2>
-        <form>
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required><label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
 
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" required>
+  <div class="form-container">
+    <h2>लोक सेवा आवेदन फारम</h2>
 
-        <label for="dob">Date of Birth</label>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="fullName">पूरा नाम:</label>
+        <input type="text" id="fullName" name="fullName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">जन्म मिति:</label>
         <input type="date" id="dob" name="dob" required>
+      </div>
 
-        <label for="gender">Gender</label>
+      <div class="form-group">
+        <label for="gender">लिङ्ग:</label>
         <select id="gender" name="gender" required>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
+          <option value="">--छान्नुहोस्--</option>
+          <option value="पुरुष">पुरुष</option>
+          <option value="महिला">महिला</option>
+          <option value="अन्य">अन्य</option>
         </select>
+      </div>
 
-        <label for="address">Address</label>
-        <textarea id="address" name="address" rows="3" required></textarea>
+      <div class="form-group">
+        <label for="citizenship">नागरिकता नं:</label>
+        <input type="text" id="citizenship" name="citizenship" required>
+      </div>
 
-        <label for="qualification">Qualification</label>
-        <input type="text" id="qualification" name="qualification" required>
+      <div class="form-group">
+        <label for="address">स्थायी ठेगाना:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
 
-        <label for="experience">Experience</label>
+      <div class="form-group">
+        <label for="email">इमेल ठेगाना:</label>
+        <input type="email" id="email" name="email">
+      </div>
+
+      <div class="form-group">
+        <label for="qualification">शैक्षिक योग्यता:</label>
+        <textarea id="qualification" name="qualification" rows="3" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="position">आवेदन दिएको पद:</label>
+        <input type="text" id="position" name="position" required>
+      </div>
+
+      <div class="form-group">
+        <label for="experience">अनुभव (यदि कुनै छ भने):</label>
         <textarea id="experience" name="experience" rows="3"></textarea>
+      </div>
 
-        <button type="submit">Submit</button>
+      <button type="submit">पेश गर्नुहोस्</button>
     </form>
-</div>
+  </div>
 
 </body>
 </html>

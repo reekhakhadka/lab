@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.5;
+}
+
+.container {
+   max-width: 800px;
+    margin: 15px auto;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    font-size: 2.5em;
+}
+
+section h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.job, .degree {
+    margin-bottom: 10px;
+}
+
+.job h3, .degree h3{
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.company, .institution {
+    font-style: italic;
+    color: #777;
+}
+
+.dates {
+    font-size: 0.9em;
+    color: #777;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 15px;
+}
