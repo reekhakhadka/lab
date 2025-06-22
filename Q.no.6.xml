@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<school xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/C:/Users/user/Documents/XML/Q.no.6.xsd">
+    <name>Engineering School</name>
+   <location>PK Campus</location>
+
+    <staffCollection>
+        <staff staffId="ST001">
+            <name>Er. Reekha Khadka </name>
+            <title>Professor</title>
+            <category>academic</category>
+            <addresses>
+                <address>
+                    <street>123 Raniban</street>
+                    <suburb>Park</suburb>
+                    <postcode>30</postcode>
+                </address>
+            </addresses>
+        </staff>
+        <staff staffId="ST002">
+            <name>Mrs.Sandhya</name>
+            <title></title>
+            <category>technical</category>
+            <addresses>
+                <address>
+                    <street>456</street>
+                    <suburb>Dilli</suburb>
+                    <postcode>32</postcode>
+                </address>
+                <address>
+                    <street>789 </street>
+                    <suburb>Raniban</suburb>
+                    <postcode>31</postcode>
+                </address>
+            </addresses>
+        </staff>
+    </staffCollection>
+
+    <subjectCollection>
+        <subject subjectCode="ENG101">
+            <name>Introduction to Engineering</name>
+            <description>Basics of Engineering</description>
+            <capacity>100</capacity>
+            <taughtBy>ST001</taughtBy>
+            <taughtBy>ST002</taughtBy>
+        </subject>
+        <subject subjectCode="ENG201">
+            <name>Advanced Mechanics</name>
+            <description>Analysis of mechanical systems</description>
+            <capacity>50</capacity>
+            <taughtBy>ST001</taughtBy>
+        </subject>
+    </subjectCollection>
+</school>

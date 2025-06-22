@@ -1,0 +1,27 @@
+﻿<?xml-stylesheet type="text/xsl" href="Q.no.16.xsl"?>
+<products>
+    <product>
+        <productname>Apple</productname>
+        <category>Fruit</category>
+        <price>3</price>
+        <quantity>15</quantity>
+    </product>
+    <product>
+        <productname>Banana</productname>
+        <category>Fruit</category>
+        <price>1</price>
+        <quantity>8</quantity>
+    </product>
+    <product>
+        <productname>Carrot</productname>
+        <category>Vegetable</category>
+        <price>2</price>
+        <quantity>20</quantity>
+    </product>
+    <product>
+        <productname>Broccoli</productname>
+        <category>Vegetable</category>
+        <price>4</price>
+        <quantity>5</quantity>
+    </product>
+</products>
