@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<students xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/C:/Users/user/Documents/XML/Q.no.11.xsd">
-
-    <student regid="125" firstName="Hari" lastName="Kumar" age="20" university="TU"/>
-    
-</students>
