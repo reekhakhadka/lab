@@ -1,42 +1,11 @@
 <?php
-// Store cookie
-if (isset($_POST['store'])) {
-    $username = $_POST['username'];
-    setcookie("username", $username, time() + (86400 * 7)); // 7 days
-    echo "<p style='color:green;'>Cookie stored successfully.</p>";
+function triangleArea($base, $height) {
+    return ($base * $height) / 2;
 }
 
-// Retrieve cookie
-if (isset($_POST['retrieve'])) {
-    if (isset($_COOKIE['username'])) {
-        echo "<p>Stored Cookie Value: <strong>" . htmlspecialchars($_COOKIE['username']) . "</strong></p>";
-    } else {
-        echo "<p style='color:red;'>No cookie found.</p>";
-    }
-}
-
-// Destroy cookie
-if (isset($_POST['destroy'])) {
-    setcookie("username", "", time() - 3600); // Expire the cookie
-    echo "<p style='color:orange;'>Cookie destroyed successfully.</p>";
-}
+// Example usage:
+echo triangleArea(10, 5);    // Output: 25
+echo triangleArea(7, 3);     // Output: 10.5
+echo triangleArea(12, 8);    // Output: 48
+echo triangleArea(5.5, 4);   // Output: 11
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Cookie Demo</title>
-</head>
-<body>
-    <h2>PHP Cookie Management</h2>
-
-    <form method="post" action="">
-        <label>Enter Username:</label>
-        <input type="text" name="username" required><br><br>
-
-        <input type="submit" name="store" value="Store Cookie">
-        <input type="submit" name="retrieve" value="Retrieve Cookie">
-        <input type="submit" name="destroy" value="Destroy Cookie">
-    </form>
-</body>
-</html>
