@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation Example</title>
+</head>
+<body>
+
+<h2>DOM Manipulation Example</h2>
+
+<!-- Four paragraphs -->
+<p id="para1">Paragraph 1</p>
+<p id="para2">Paragraph 2</p>
+<p id="para3">Paragraph 3</p>
+<p id="para4">Paragraph 4</p>
+
+<script>
+    // a. Get the first paragraph using tag name with querySelector
+    const firstPara = document.querySelector("p");
+    console.log("First paragraph using querySelector:", firstPara.textContent);
+
+    // b. Get paragraphs by their ID
+    const p1 = document.querySelector("#para1");
+    const p2 = document.querySelector("#para2");
+    const p3 = document.querySelector("#para3");
+    const p4 = document.querySelector("#para4");
+
+    console.log("By IDs:", p1.textContent, p2.textContent, p3.textContent, p4.textContent);
+
+    // c. Get all paragraphs as NodeList using querySelectorAll
+    const allParas = document.querySelectorAll("p");
+    console.log("All paragraphs (NodeList):", allParas);
+
+    // d. Loop through NodeList and get text content
+    allParas.forEach((para, index) => {
+        console.log(`Paragraph ${index + 1}: ${para.textContent}`);
+    });
+
+    // e. Set text content of the fourth paragraph
+    p4.textContent = "Fourth Paragraph";
+
+    // f. Set id and class attribute for all paragraphs using different methods
+    p1.id = "first"; // Using property
+    p1.className = "paraClass"; // Using property
+
+    p2.setAttribute("id", "second"); // Using setAttribute
+    p2.setAttribute("class", "paraClass");
+
+    p3.id = "third";
+    p3.classList.add("paraClass"); // Using classList
+
+    p4.setAttribute("id", "fourth");
+    p4.classList.add("paraClass");
+
+    // g. Change style of each paragraph
+    allParas.forEach(para => {
+        para.style.backgroundColor = "#f0f0f0";
+        para.style.border = "1px solid #333";
+        para.style.fontSize = "18px";
+        para.style.fontFamily = "Arial, sans-serif";
+        para.style.padding = "5px";
+        para.style.margin = "5px 0";
+    });
+
+    // h. Loop through all paragraphs and set colors
+    allParas.forEach((para, index) => {
+        if (index === 0 || index === 2) {
+            para.style.color = "green"; // first and third
+        } else if (index === 1 || index === 3) {
+            para.style.color = "red"; // second and fourth
+        }
+    });
+
+    // i. Set text content, id and class for each paragraph
+    allParas.forEach((para, index) => {
+        para.textContent = `This is paragraph ${index + 1}`;
+        para.id = `para${index + 1}`;
+        para.className = `paragraphClass${index + 1}`;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>30 Days Of JavaScript Challenges</title>
+    <style>
+        .wrapper {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1, h2 {
+            padding: 10px;
+        }
+        ul li {
+            list-style: none;
+            padding: 5px;
+            margin: 5px 0;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <h1 id="year">Asabeneh Yetayeh challenges in 2020</h1>
+    <h2 id="dateTime">30DaysOfJavaScript Challenge</h2>
+
+    <ul id="challengesList">
+        <li>Python Challenge Done</li>
+        <li>JavaScript Challenge Ongoing</li>
+        <li>React Challenge Coming</li>
+        <li>Fullstack Challenge Coming</li>
+        <li>DataAnalysis Challenge Coming</li>
+        <li>ReactNative Challenge Coming</li>
+        <li>MachineLearning Challenge Coming</li>
+    </ul>
+</div>
+
+<script>
+    // a. Change year color every 1 second
+    const yearElement = document.getElementById("year");
+    setInterval(() => {
+        yearElement.style.color = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+    }, 1000);
+
+    // b. Change date/time background color every 1 second
+    const dateTimeElement = document.getElementById("dateTime");
+    setInterval(() => {
+        dateTimeElement.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+        dateTimeElement.textContent = `30DaysOfJavaScript Challenge - ${new Date().toLocaleString()}`;
+    }, 1000);
+
+    // c, d, e. Set background color for challenges based on their status
+    const challenges = document.querySelectorAll("#challengesList li");
+
+    challenges.forEach(li => {
+        const text = li.textContent.toLowerCase();
+        if (text.includes("done")) {
+            li.style.backgroundColor = "green";       // Completed challenge
+        } else if (text.includes("ongoing")) {
+            li.style.backgroundColor = "yellow";      // Ongoing challenge
+            li.style.color = "black";                 // Better contrast for yellow
+        } else if (text.includes("coming")) {
+            li.style.backgroundColor = "red";         // Coming challenge
+        }
+        li.style.borderRadius = "5px";
+        li.style.padding = "5px";
+    });
+</script>
+
+</body>
+</html>

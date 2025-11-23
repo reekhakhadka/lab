@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Largest of Five Numbers</title>
+</head>
+<body>
+
+<h2>Find the Largest of Five Numbers</h2>
+
+<button onclick="findLargest()">Enter Numbers</button>
+
+<script>
+function findLargest() {
+    let num1 = parseFloat(prompt("Enter the first number:"));
+    let num2 = parseFloat(prompt("Enter the second number:"));
+    let num3 = parseFloat(prompt("Enter the third number:"));
+    let num4 = parseFloat(prompt("Enter the fourth number:"));
+    let num5 = parseFloat(prompt("Enter the fifth number:"));
+
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4) || isNaN(num5)) {
+        alert("Please enter valid numbers.");
+        return;
+    }
+
+    let largest = num1;
+
+    if (num2 > largest) largest = num2;
+    if (num3 > largest) largest = num3;
+    if (num4 > largest) largest = num4;
+    if (num5 > largest) largest = num5;
+
+    alert("The largest number is: " + largest);
+}
+</script>
+
+</body>
+</html>

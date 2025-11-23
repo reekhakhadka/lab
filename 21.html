@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Next Weekend Dates</title>
+</head>
+<body>
+
+<h2>Next Weekend Dates</h2>
+<p id="weekend"></p>
+
+<script>
+function getNextWeekendDates() {
+    const today = new Date();
+    const dayOfWeek = today.getDay(); // 0 = Sunday, 6 = Saturday
+
+    let saturday = new Date(today);
+    let sunday = new Date(today);
+
+    saturday.setDate(today.getDate() + ((6 - dayOfWeek + 7) % 7));
+    sunday.setDate(saturday.getDate() + 1);
+
+    return {
+        saturday: saturday.toDateString(),
+        sunday: sunday.toDateString()
+    };
+}
+
+const weekend = getNextWeekendDates();
+document.getElementById("weekend").innerHTML = 
+    "Next Saturday: " + weekend.saturday + "<br>" +
+    "Next Sunday: " + weekend.sunday;
+</script>
+
+</body>
+</html>

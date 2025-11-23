@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Larger and Smaller Number</title>
+</head>
+<body>
+
+<h2>Find Larger and Smaller Number</h2>
+
+<input type="number" id="num1" placeholder="Enter first number">
+<input type="number" id="num2" placeholder="Enter second number">
+
+<br><br>
+
+<button onclick="compareNumbers()">Compare</button>
+
+<p id="result"></p>
+
+<script>
+    function compareNumbers() {
+        let a = parseInt(document.getElementById("num1").value);
+        let b = parseInt(document.getElementById("num2").value);
+
+        if (isNaN(a) || isNaN(b)) {
+            document.getElementById("result").innerHTML = "Please enter valid integers.";
+            return;
+        }
+
+        let larger, smaller;
+
+        if (a > b) {
+            larger = a;
+            smaller = b;
+        } else if (a < b) {
+            larger = b;
+            smaller = a;
+        } else {
+            document.getElementById("result").innerHTML = "Both numbers are equal: " + a;
+            return;
+        }
+
+        document.getElementById("result").innerHTML = 
+            "Larger number: " + larger + "<br>Smaller number: " + smaller;
+    }
+</script>
+
+</body>
+</html>

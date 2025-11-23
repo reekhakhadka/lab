@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paragraph Manipulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        p {
+            font-size: 12pt;
+            padding: 10px;
+            border: 1px solid #333;
+            width: 400px;
+        }
+        button {
+            margin: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Paragraph Manipulation</h2>
+
+<p id="myParagraph">This is a sample paragraph. You can manipulate it using the buttons below.</p>
+
+<div>
+    <button onclick="changeBackground()">Change Background</button>
+    <button onclick="changeParagraphBackground()">Change Paragraph Background</button>
+    <button onclick="hideParagraph()">Hide Paragraph</button>
+    <button onclick="showParagraph()">Show Paragraph</button>
+    <button onclick="increaseFont()">Increase Font</button>
+    <button onclick="decreaseFont()">Decrease Font</button>
+    <button onclick="resetFont()">Reset Font</button>
+    <button onclick="changeTextColor()">Change Text Color</button>
+</div>
+
+<script>
+    const paragraph = document.getElementById("myParagraph");
+    let fontSize = 12; // initial font size in pt
+
+    function changeBackground() {
+        document.body.style.backgroundColor = getRandomColor();
+    }
+
+    function changeParagraphBackground() {
+        paragraph.style.backgroundColor = getRandomColor();
+    }
+
+    function hideParagraph() {
+        paragraph.style.display = "none";
+    }
+
+    function showParagraph() {
+        paragraph.style.display = "block";
+    }
+
+    function increaseFont() {
+        fontSize += 2;
+        paragraph.style.fontSize = fontSize + "pt";
+    }
+
+    function decreaseFont() {
+        fontSize -= 2;
+        if (fontSize < 2) fontSize = 2; // minimum font size
+        paragraph.style.fontSize = fontSize + "pt";
+    }
+
+    function resetFont() {
+        fontSize = 12;
+        paragraph.style.fontSize = fontSize + "pt";
+    }
+
+    function changeTextColor() {
+        paragraph.style.color = getRandomColor();
+    }
+
+    // Helper function to generate random color
+    function getRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+</script>
+
+</body>
+</html>

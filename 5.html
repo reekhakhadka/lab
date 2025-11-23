@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Date Formats</title>
+</head>
+<body>
+
+<h2>Current Date in Different Formats</h2>
+
+<p id="date1"></p>
+<p id="date2"></p>
+<p id="date3"></p>
+<p id="date4"></p>
+<p id="date5"></p>
+
+<script>
+    const today = new Date();
+
+    let dd = today.getDate();
+    let mm = today.getMonth() + 1; 
+    let yyyy = today.getFullYear();
+
+    // Add 0 to single digits
+    dd = dd < 10 ? "0" + dd : dd;
+    mm = mm < 10 ? "0" + mm : mm;
+
+    // For month name and day name
+    const months = [
+        "January","February","March","April","May","June",
+        "July","August","September","October","November","December"
+    ];
+
+    const days = [
+        "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+    ];
+
+    document.getElementById("date1").innerHTML = "mm-dd-yyyy : " + mm + "-" + dd + "-" + yyyy;
+    document.getElementById("date2").innerHTML = "mm/dd/yyyy : " + mm + "/" + dd + "/" + yyyy;
+    document.getElementById("date3").innerHTML = "dd-mm-yyyy : " + dd + "-" + mm + "-" + yyyy;
+    document.getElementById("date4").innerHTML = "dd/mm/yyyy : " + dd + "/" + mm + "/" + yyyy;
+    document.getElementById("date5").innerHTML = "yyyy month date day : " 
+        + yyyy + " " + months[today.getMonth()] + " " + dd + " " + days[today.getDay()];
+</script>
+
+</body>
+</html>

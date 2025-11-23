@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check if Input is Array</title>
+</head>
+<body>
+
+<h2>Check if Input is an Array</h2>
+
+<input type="text" id="inputValue" placeholder="Enter value (comma-separated for array)">
+<br><br>
+<button onclick="checkArray()">Check</button>
+
+<p id="result"></p>
+
+<script>
+    function checkArray() {
+        let input = document.getElementById("inputValue").value;
+
+        // Convert comma-separated input into an array if it has commas
+        let value = input.includes(',') ? input.split(',') : input;
+
+        let result = Array.isArray(value) ? "Input is an array." : "Input is not an array.";
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+
+</body>
+</html>

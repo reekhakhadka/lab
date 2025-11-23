@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input, button {
+            padding: 5px 10px;
+            margin: 5px;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+            width: 50%;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Cookie Manager</h2>
+
+<div>
+    <h3>Create/Set Cookie</h3>
+    Key: <input type="text" id="setKey" placeholder="Enter key">
+    Value: <input type="text" id="setValue" placeholder="Enter value">
+    <button onclick="setCookie()">Set Cookie</button>
+</div>
+
+<div>
+    <h3>Read Cookie</h3>
+    Key: <input type="text" id="readKey" placeholder="Enter key">
+    <button onclick="readCookie()">Read Cookie</button>
+    <span id="readResult"></span>
+</div>
+
+<div>
+    <h3>All Cookies</h3>
+    <button onclick="displayCookies()">Display All Cookies</button>
+    <table id="cookiesTable">
+        <thead>
+            <tr><th>Key</th><th>Value</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<div>
+    <h3>Delete Cookie</h3>
+    Key: <input type="text" id="deleteKey" placeholder="Enter key">
+    <button onclick="deleteCookie()">Delete Cookie</button>
+</div>
+
+<div>
+    <h3>Delete All Cookies</h3>
+    <button onclick="deleteAllCookies()">Delete All</button>
+</div>
+
+<script>
+    // a. Set Cookie
+    function setCookie() {
+        const key = document.getElementById("setKey").value;
+        const value = document.getElementById("setValue").value;
+        if (!key || !value) {
+            alert("Please enter both key and value");
+            return;
+        }
+        // Expires in 7 days
+        const d = new Date();
+        d.setTime(d.getTime() + (7*24*60*60*1000));
+        const expires = "expires=" + d.toUTCString();
+        document.cookie = `${key}=${value}; ${expires}; path=/`;
+        alert(`Cookie set: ${key}=${value}`);
+        displayCookies();
+    }
+
+    // b. Read Cookie
+    function readCookie() {
+        const key = document.getElementById("readKey").value;
+        const cookies = document.cookie.split("; ");
+        let value = null;
+        cookies.forEach(cookie => {
+            const [k, v] = cookie.split("=");
+            if (k === key) value = v;
+        });
+        document.getElementById("readResult").textContent = value ? `Value: ${value}` : "Cookie not found";
+    }
+
+    // c. Display all cookies
+    function displayCookies() {
+        const tbody = document.querySelector("#cookiesTable tbody");
+        tbody.innerHTML = "";
+        const cookies = document.cookie.split("; ").filter(c => c);
+        cookies.forEach(cookie => {
+            const [key, value] = cookie.split("=");
+            const row = tbody.insertRow();
+            row.insertCell().textContent = key;
+            row.insertCell().textContent = value;
+        });
+    }
+
+    // d. Delete cookie by key
+    function deleteCookie() {
+        const key = document.getElementById("deleteKey").value;
+        if (!key) {
+            alert("Please enter key to delete");
+            return;
+        }
+        document.cookie = `${key}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+        alert(`Cookie deleted: ${key}`);
+        displayCookies();
+    }
+
+    // e. Delete all cookies
+    function deleteAllCookies() {
+        const cookies = document.cookie.split("; ").filter(c => c);
+        cookies.forEach(cookie => {
+            const key = cookie.split("=")[0];
+            document.cookie = `${key}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+        });
+        alert("All cookies deleted");
+        displayCookies();
+    }
+
+    // Initial display
+    displayCookies();
+</script>
+
+</body>
+</html>

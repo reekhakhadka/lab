@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dog Object Example</title>
+</head>
+<body>
+
+<h2>Dog Object Information</h2>
+
+<button onclick="showDogInfo()">Show Dog Info</button>
+
+<p id="dogInfo"></p>
+
+<script>
+    // a. Create an empty object called dog
+    let dog = {};
+
+    // c. Add properties to the dog object
+    dog.name = "Buddy";
+    dog.legs = 4;
+    dog.color = "Brown";
+    dog.age = 3;
+    dog.bark = function() {
+        return "Woof Woof";
+    };
+
+    // e. Set new properties: breed, getDogInfo
+    dog.breed = "Labrador";
+    dog.getDogInfo = function() {
+       return `${this.name} is a ${this.age}-year-old ${this.color} ${this.breed} with ${this.legs} legs.`;
+    };
+
+    function showDogInfo() {
+        let info = `
+            <strong>Name:</strong> ${dog.name}<br>
+            <strong>Legs:</strong> ${dog.legs}<br>
+            <strong>Color:</strong> ${dog.color}<br>
+            <strong>Age:</strong> ${dog.age}<br>
+            <strong>Bark:</strong> ${dog.bark()}<br>
+            <strong>Breed:</strong> ${dog.breed}<br>
+            <strong>Dog Info:</strong> ${dog.getDogInfo()}
+        `;
+        document.getElementById("dogInfo").innerHTML = info;
+    }
+</script>
+
+</body>
+</html>

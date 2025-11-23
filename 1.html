@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse</title>
+</head>
+<body>
+    <script>
+   function reverseNumber(num) {
+    // Convert number to string, split into characters, reverse, join back, then convert to number
+    let reversed = Number(num.toString().split('').reverse().join(''));
+    return reversed;
+}
+
+// Example
+console.log(reverseNumber(12345)); // Output: 54321 
+</script>
+</body>
+</html>
+
+

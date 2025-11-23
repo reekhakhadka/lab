@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Characters from String</title>
+</head>
+<body>
+
+<h2>Remove Characters from a String</h2>
+
+<input type="text" id="inputStr" placeholder="Enter string"><br><br>
+<input type="number" id="start" placeholder="Start index"><br><br>
+<input type="number" id="count" placeholder="Number of characters to remove"><br><br>
+<button onclick="removeChars()">Remove</button>
+
+<p id="result"></p>
+
+<script>
+function removeCharacters(str, start, count) {
+    return str.slice(0, start) + str.slice(start + count);
+}
+
+function removeChars() {
+    let str = document.getElementById("inputStr").value;
+    let start = parseInt(document.getElementById("start").value);
+    let count = parseInt(document.getElementById("count").value);
+
+    if (isNaN(start) || isNaN(count)) {
+        document.getElementById("result").innerHTML = "Please enter valid numbers for start and count.";
+        return;
+    }
+
+    let result = removeCharacters(str, start, count);
+    document.getElementById("result").innerHTML = "Result: " + result;
+}
+</script>
+
+</body>
+</html>

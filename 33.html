@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		
+		h1 {
+			text-align: center;
+		}
+		
+		#calculator {
+			margin: 0 auto;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+			padding: 20px;
+			width: 300px;
+		}
+		
+		input[type="button"] {
+			background-color: #4CAF50;
+			border: none;
+			color: #fff;
+			cursor: pointer;
+			font-size: 16px;
+			margin: 2px;
+			padding: 10px;
+			width: 60px;
+		}
+		
+		input[type="text"] {
+			background-color: #fff;
+			border: none;
+			color: #000;
+			font-size: 24px;
+			margin: 2px;
+			padding: 10px;
+			text-align: right;
+			width: 240px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Calculator</h1>
+	<div id="calculator">
+		<input type="text" id="result" readonly>
+        <input type="button" value="7" onclick="document.getElementById('result').value += '7'">
+		<input type="button" value="8" onclick="document.getElementById('result').value += '8'">
+		<input type="button" value="9" onclick="document.getElementById('result').value += '9'">
+		<input type="button" value="/" onclick="document.getElementById('result').value += '/'">
+		<input type="button" value="4" onclick="document.getElementById('result').value += '4'">
+		<input type="button" value="5" onclick="document.getElementById('result').value += '5'">
+		<input type="button" value="6" onclick="document.getElementById('result').value += '6'">
+		<input type="button" value="" onclick="document.getElementById('result').value += ''">
+		<input type="button" value="1" onclick="document.getElementById('result').value += '1'">
+		<input type="button" value="2" onclick="document.getElementById('result').value += '2'">
+		<input type="button" value="3" onclick="document.getElementById('result').value += '3'">
+		<input type="button" value="-" onclick="document.getElementById('result').value += '-'">
+		<input type="button" value="0" onclick="document.getElementById('result').value += '0'">
+		<input type="button" value="." onclick="document.getElementById('result').value += '.'">
+		<input type="button" value="=" onclick="document.getElementById('result').value = eval(document.getElementById('result').value)">
+		<input type="button" value="+" onclick="document.getElementById('result').value += '+'">
+		<input type="button" value="C" onclick="document.getElementById('result').value = ''">
+	</div>
+</body>
+</html>

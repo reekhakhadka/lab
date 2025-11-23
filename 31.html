@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Numbers Coloring</title>
+    <style>
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin-top: 20px;
+        }
+        .number {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 3px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Numbers Coloring: Evens, Odds, Primes</h2>
+
+<label>Enter a number: </label>
+<input type="number" id="userNumber" min="1" placeholder="Enter a number">
+<button onclick="generateNumbers()">Generate</button>
+
+<div id="container"></div>
+
+<script>
+    const container = document.getElementById("container");
+
+    // Function to check prime
+    function isPrime(num) {
+        if (num < 2) return false;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) return false;
+        }
+        return true;
+    }
+
+    function generateNumbers() {
+        const maxNumber = parseInt(document.getElementById("userNumber").value);
+        container.innerHTML = ""; // Clear previous numbers
+
+        if (isNaN(maxNumber) || maxNumber < 1) {
+            alert("Please enter a valid number greater than 0");
+            return;
+        }
+
+        for (let i = 1; i <= maxNumber; i++) {
+            const div = document.createElement("div");
+            div.textContent = i;
+            div.classList.add("number");
+
+            if (isPrime(i)) {
+                div.style.backgroundColor = "red";       // Prime numbers
+            } else if (i % 2 === 0) {
+                div.style.backgroundColor = "green";     // Even numbers
+            } else {
+                div.style.backgroundColor = "yellow";    // Odd numbers
+                div.style.color = "black";               // For better contrast
+            }
+
+            container.appendChild(div);
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clone and Remove Table Row</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 5px 10px;
+            margin: 10px 0;
+        }
+        .trash {
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Clone and Remove Table Row</h2>
+
+<button id="addRowBtn">Add New Row</button>
+
+<table id="myTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John</td>
+            <td>25</td>
+            <td><span class="trash">&#128465;</span></td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>30</td>
+            <td><span class="trash">&#128465;</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    const table = document.getElementById("myTable").getElementsByTagName("tbody")[0];
+    const addRowBtn = document.getElementById("addRowBtn");
+
+    // Function to add new row by cloning the last row
+    addRowBtn.addEventListener("click", () => {
+        const lastRow = table.rows[table.rows.length - 1];
+        const newRow = lastRow.cloneNode(true);
+
+        // Optional: Clear input/text values in new row
+        newRow.cells[0].textContent = "New Name";
+        newRow.cells[1].textContent = "Age";
+
+        table.appendChild(newRow);
+        addTrashEvent(newRow);
+    });
+
+    // Function to add delete event to trash icon
+    function addTrashEvent(row) {
+        const trash = row.querySelector(".trash");
+        trash.addEventListener("click", () => {
+            row.remove();
+        });
+    }
+
+    // Add delete event to initial rows
+    Array.from(table.rows).forEach(row => addTrashEvent(row));
+</script>
+
+</body>
+</html>

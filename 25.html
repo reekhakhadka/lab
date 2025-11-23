@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Person Account</title>
+</head>
+<body>
+
+<h2>Person Account</h2>
+
+<div>
+    <button onclick="showAccountInfo()">Show Account Info</button>
+</div>
+<br>
+
+<h3>Add Income</h3>
+<input type="number" id="incomeAmount" placeholder="Amount">
+<input type="text" id="incomeDesc" placeholder="Description">
+<button onclick="addIncome()">Add Income</button>
+<br><br>
+
+<h3>Add Expense</h3>
+<input type="number" id="expenseAmount" placeholder="Amount">
+<input type="text" id="expenseDesc" placeholder="Description">
+<button onclick="addExpense()">Add Expense</button>
+<br><br>
+
+<h3>Account Summary:</h3>
+<pre id="accountInfo"></pre>
+
+<script>
+const personAccount = {
+    firstName: "John",
+    lastName: "Doe",
+    incomes: [
+        { amount: 5000, description: "Salary" },
+        { amount: 200, description: "Freelance" }
+    ],
+    expenses: [
+        { amount: 1000, description: "Rent" },
+        { amount: 200, description: "Groceries" }
+    ],
+
+    totalIncome: function() {
+        return this.incomes.reduce((total, income) => total + income.amount, 0);
+    },
+
+    totalExpense: function() {
+        return this.expenses.reduce((total, expense) => total + expense.amount, 0);
+    },
+
+    accountBalance: function() {
+        return this.totalIncome() - this.totalExpense();
+    },
+
+    addIncome: function(amount, description) {
+        this.incomes.push({ amount, description });
+    },
+
+    addExpense: function(amount, description) {
+        this.expenses.push({ amount, description });
+    },
+
+    accountInfo: function() {
+        let info = `
+Account Holder: ${this.firstName} ${this.lastName}
+
+Total Income: $${this.totalIncome()}
+Incomes:
+${this.incomes.map(i => ` - ${i.description}: $${i.amount}`).join('\n')}
+
+Total Expenses: $${this.totalExpense()}
+Expenses:
+${this.expenses.map(e => ` - ${e.description}: $${e.amount}`).join('\n')}
+
+Account Balance: $${this.accountBalance()}
+        `;
+        return info;
+    }
+};
+
+// Display account info
+function showAccountInfo() {
+    document.getElementById("accountInfo").textContent = personAccount.accountInfo();
+}
+
+// Add new income
+function addIncome() {
+    let amount = parseFloat(document.getElementById("incomeAmount").value);
+    let description = document.getElementById("incomeDesc").value;
+
+    if (isNaN(amount) || description.trim() === "") {
+        alert("Enter valid amount and description for income.");
+        return;
+    }
+
+    personAccount.addIncome(amount, description);
+    showAccountInfo();
+
+    // Clear inputs
+    document.getElementById("incomeAmount").value = "";
+    document.getElementById("incomeDesc").value = "";
+}
+
+// Add new expense
+function addExpense() {
+    let amount = parseFloat(document.getElementById("expenseAmount").value);
+    let description = document.getElementById("expenseDesc").value;
+
+    if (isNaN(amount) || description.trim() === "") {
+        alert("Enter valid amount and description for expense.");
+        return;
+    }
+
+    personAccount.addExpense(amount, description);
+    showAccountInfo();
+
+    // Clear inputs
+    document.getElementById("expenseAmount").value = "";
+    document.getElementById("expenseDesc").value = "";
+}
+
+// Initial display
+showAccountInfo();
+</script>
+
+</body>
+</html>

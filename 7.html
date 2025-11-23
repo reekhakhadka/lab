@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+<h2>Simple Calculator</h2>
+
+<input type="number" id="num1" placeholder="Enter first number">
+<input type="number" id="num2" placeholder="Enter second number">
+
+<br><br>
+
+<button onclick="calculate('add')">Addition</button>
+<button onclick="calculate('sub')">Subtraction</button>
+<button onclick="calculate('mul')">Multiplication</button>
+<button onclick="calculate('div')">Division</button>
+
+<p id="result"></p>
+
+<script>
+    function calculate(operation) {
+        let a = parseFloat(document.getElementById("num1").value);
+        let b = parseFloat(document.getElementById("num2").value);
+        let result = "";
+
+        if (isNaN(a) || isNaN(b)) {
+            result = "Please enter valid numbers.";
+        } else {
+            if (operation === "add") {
+                result = "Result: " + (a + b);
+            } 
+            else if (operation === "sub") {
+                result = "Result: " + (a - b);
+            } 
+            else if (operation === "mul") {
+                result = "Result: " + (a * b);
+            } 
+            else if (operation === "div") {
+                if (b === 0) {
+                    result = "Cannot divide by zero!";
+                } else {
+                    result = "Result: " + (a / b);
+                }
+            }
+        }
+
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+
+</body>
+</html>

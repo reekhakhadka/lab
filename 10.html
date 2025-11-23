@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Largest and Smallest in Array</title>
+</head>
+<body>
+
+<h2>Find Largest and Smallest in an Array</h2>
+
+<input type="text" id="numbers" placeholder="Enter numbers separated by commas">
+<br><br>
+<button onclick="findLargestSmallest()">Check</button>
+
+<p id="result"></p>
+
+<script>
+    function findLargestSmallest() {
+        // Get input and convert to array of numbers
+        let input = document.getElementById("numbers").value;
+        let arr = input.split(',').map(num => parseInt(num.trim()));
+
+        // Check for valid numbers
+        if (arr.some(isNaN) || arr.length === 0) {
+            document.getElementById("result").innerHTML = "Please enter valid integers separated by commas.";
+            return;
+        }
+
+        // Find largest and smallest using Math
+        let largest = Math.max(...arr);
+        let smallest = Math.min(...arr);
+
+        document.getElementById("result").innerHTML = 
+            "Largest number: " + largest + "<br>Smallest number: " + smallest;
+    }
+</script>
+
+</body>
+</html>
