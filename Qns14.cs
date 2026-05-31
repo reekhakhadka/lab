@@ -1,43 +1,51 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace unit_2
+namespace Reekha3
 {
-    /* class Qns14
+   
+
+    /*class ContactBook
+    {
+        private string[] names = new string[5];
+        private string[] phones = new string[5];
+
+        // Indexer
+        public string this[int index]
+        {
+            get
+            {
+                return names[index] + " - " + phones[index];
+            }
+            set
+            {
+                string[] data = value.Split(',');
+
+                names[index] = data[0];
+                phones[index] = data[1];
+            }
+        }
+    }
+
+    class Qns14
     {
         static void Main()
         {
-            string[][] books = new string[3][];
+            ContactBook contacts = new ContactBook();
 
-            // Input
-            for (int i = 0; i < 3; i++)
-            {
-                books[i] = new string[3];
+            contacts[0] = "Ram,9841000001";
+            contacts[1] = "Shyam,9841000002";
+            contacts[2] = "Hari,9841000003";
 
-                Console.WriteLine("Enter details for Book " + (i + 1));
-
-                Console.Write("Title: ");
-                books[i][0] = Console.ReadLine();
-
-                Console.Write("Author: ");
-                books[i][1] = Console.ReadLine();
-
-                Console.Write("Year: ");
-                books[i][2] = Console.ReadLine();
-            }
-
-            // Display
-            Console.WriteLine("\n--- Book Details ---");
+            Console.WriteLine("Contact Information:");
 
             for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine("\nBook " + (i + 1));
-                Console.WriteLine("Title: " + books[i][0]);
-                Console.WriteLine("Author: " + books[i][1]);
-                Console.WriteLine("Year: " + books[i][2]);
+                Console.WriteLine(contacts[i]);
             }
         }
     }*/
 }
-

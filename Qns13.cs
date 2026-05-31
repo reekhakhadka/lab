@@ -1,42 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace unit_2
+namespace Reekha3
 {
-    
-     /*class Qns13
+
+   /* class BCASubjects
+    {
+        private string[] subjects = new string[5];
+
+        // Indexer
+        public string this[int index]
+        {
+            get { return subjects[index]; }
+            set { subjects[index] = value; }
+        }
+    }
+
+    class Program
     {
         static void Main()
         {
-            string[,] books = new string[3, 3];
+            BCASubjects sub = new BCASubjects();
 
-            // Input
-            for (int i = 0; i < 3; i++)
+            sub[0] = "System Analysis and Design";
+            sub[1] = "Java Programming";
+            sub[2] = "Web Technology";
+            sub[3] = "Computer Graphics";
+            sub[4] = "Numerical Methods";
+
+            Console.WriteLine("BCA 5th Semester Subjects:");
+
+            for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine("Enter details for Book " + (i + 1));
-
-                Console.Write("Title: ");
-                books[i, 0] = Console.ReadLine();
-
-                Console.Write("Author: ");
-                books[i, 1] = Console.ReadLine();
-
-                Console.Write("Year: ");
-                books[i, 2] = Console.ReadLine();
-            }
-
-            // Display
-            Console.WriteLine("\n--- Book Details ---");
-
-            for (int i = 0; i < 3; i++)
-            {
-                Console.WriteLine("\nBook " + (i + 1));
-                Console.WriteLine("Title: " + books[i, 0]);
-                Console.WriteLine("Author: " + books[i, 1]);
-                Console.WriteLine("Year: " + books[i, 2]);
+                Console.WriteLine(sub[i]);
             }
         }
     }*/
 }
-

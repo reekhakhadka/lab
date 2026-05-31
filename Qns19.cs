@@ -1,31 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
+namespace Reekha3
+{
+   
 
-namespace OuterNamespace
+   /* class GenericClass<T>
     {
-        namespace InnerNamespace
+        private T data;
+
+        public GenericClass(T value)
         {
-            class Demo
-            {
-                public void Show()
-                {
-                    Console.WriteLine("Inside Nested Namespace");
-                }
-            }
+            data = value;
+        }
+
+        public void Display()
+        {
+            Console.WriteLine("Data: " + data);
         }
     }
 
-    class Program
+    class Qns19
     {
+        // Generic Method
+        static void Show<T>(T value)
+        {
+            Console.WriteLine("Value: " + value);
+        }
+
         static void Main()
         {
-            OuterNamespace.InnerNamespace.Demo obj =
-                new OuterNamespace.InnerNamespace.Demo();
+            GenericClass<int> obj1 = new GenericClass<int>(100);
+            GenericClass<string> obj2 = new GenericClass<string>("Hello");
 
-            obj.Show();
+            obj1.Display();
+            obj2.Display();
+
+            Show<int>(500);
+            Show<string>("Generic Method");
         }
-    }
-
-
+    }*/
+}

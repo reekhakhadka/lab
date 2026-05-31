@@ -1,31 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace unit_2
+namespace Reekha3
 {
-    /*
-    class Qsn5
+
+    /*struct Company
+    {
+        public string companyName;
+        public string address;
+        public string phone;
+        public double salary;
+
+        public void Display()
+        {
+            Console.WriteLine("Company Name: " + companyName);
+            Console.WriteLine("Address: " + address);
+            Console.WriteLine("Phone: " + phone);
+            Console.WriteLine("Salary: " + salary);
+        }
+    }
+
+    class Qns5
     {
         static void Main()
         {
-            // Implicit Conversion (automatic)
-            int num = 10;
-            double d = num;   // int -> double
+            Company c;
 
-            Console.WriteLine("Implicit Conversion:");
-            Console.WriteLine("Integer: " + num);
-            Console.WriteLine("Converted to Double: " + d);
+            c.companyName = "ABC Pvt Ltd";
+            c.address = "Kathmandu";
+            c.phone = "9841000000";
+            c.salary = 50000;
 
-            // Explicit Conversion (manual)
-            double x = 9.78;
-            int y = (int)x;   // double -> int
-
-            Console.WriteLine("\nExplicit Conversion:");
-            Console.WriteLine("Double: " + x);
-            Console.WriteLine("Converted to Integer: " + y);
+            c.Display();
         }
-    }
-    */
-    }
-
+    }*/
+}

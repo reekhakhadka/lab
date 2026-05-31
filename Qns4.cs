@@ -1,30 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace unit_2
+namespace Reekha3
 {
 
-/*class Qns4
+   /* class Student
+    {
+        int id;
+        string name;
+
+        // Default Constructor
+        public Student()
+        {
+            id = 0;
+            name = "Unknown";
+        }
+
+        // Parameterized Constructor
+        public Student(int i, string n)
+        {
+            id = i;
+            name = n;
+        }
+
+        // Copy Constructor
+        public Student(Student s)
+        {
+            id = s.id;
+            name = s.name;
+        }
+
+        public void Display()
+        {
+            Console.WriteLine("ID: " + id);
+            Console.WriteLine("Name: " + name);
+        }
+    }
+
+    class Qns3
     {
         static void Main()
         {
-            double p, t, r, si;
+            Student s1 = new Student();
+            Student s2 = new Student(101, "Ram");
+            Student s3 = new Student(s2);
 
-            Console.Write("Enter Principal: ");
-            p = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Enter Time: ");
-            t = Convert.ToDouble(Console.ReadLine());
-
-            Console.Write("Enter Rate: ");
-            r = Convert.ToDouble(Console.ReadLine());
-
-            si = (p * t * r) / 100;
-
-            Console.WriteLine("Simple Interest = " + si);
+            s1.Display();
+            s2.Display();
+            s3.Display();
         }
     }*/
-    
-    }
-
+}

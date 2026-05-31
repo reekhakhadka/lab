@@ -1,39 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace unit_2
+namespace Reekha3
 {
-    /*class Qns12
+
+    /*class Student
+    {
+        // Auto-implemented Property
+        public int Id { get; set; }
+
+        // Read and Write Property
+        private string name;
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        // Read-only Property
+        private double marks = 85.5;
+        public double Marks
+        {
+            get { return marks; }
+        }
+
+        // Write-only Property
+        private string password;
+        public string Password
+        {
+            set { password = value; }
+        }
+    }
+
+    class Qns12
     {
         static void Main()
         {
-            char ch;
+            Student s = new Student();
 
-            Console.Write("Enter an alphabet: ");
-            ch = Convert.ToChar(Console.ReadLine());
+            s.Id = 101;
+            s.Name = "Ram";
+            s.Password = "abc123";
 
-            switch (ch)
-            {
-                case 'a':
-                case 'e':
-                case 'i':
-                case 'o':
-                case 'u':
-                case 'A':
-                case 'E':
-                case 'I':
-                case 'O':
-                case 'U':
-                    Console.WriteLine("Vowel");
-                    break;
-
-                default:
-                    Console.WriteLine("Consonant");
-                    break;
-            }
+            Console.WriteLine("ID: " + s.Id);
+            Console.WriteLine("Name: " + s.Name);
+            Console.WriteLine("Marks: " + s.Marks);
         }
     }*/
 
 }
-

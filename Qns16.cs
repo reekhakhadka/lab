@@ -1,42 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace unit_2
+namespace Reekha3
 {
-    /* class Qns16
     
+
+   /* class Animal
+    {
+        public virtual void Sound()
+        {
+            Console.WriteLine("Animal makes sound");
+        }
+    }
+
+    class Dog : Animal
+    {
+        public override void Sound()
+        {
+            Console.WriteLine("Dog barks");
+        }
+    }
+
+    class Cat : Animal
+    {
+        public override void Sound()
+        {
+            Console.WriteLine("Cat meows");
+        }
+    }
+
+    class Qns16
     {
         static void Main()
         {
-            int n;
-            Console.Write("Enter number of students: ");
-            n = Convert.ToInt32(Console.ReadLine());
+            Animal a;
 
-            int[] marks = new int[n];
-            int sum = 0;
+            a = new Dog();
+            a.Sound();
 
-            Console.WriteLine("Enter marks:");
-            for (int i = 0; i < n; i++)
-            {
-                marks[i] = Convert.ToInt32(Console.ReadLine());
-                sum += marks[i];
-            }
-
-            int min = marks[0], max = marks[0];
-
-            for (int i = 1; i < n; i++)
-            {
-                if (marks[i] < min) min = marks[i];
-                if (marks[i] > max) max = marks[i];
-            }
-
-            double avg = (double)sum / n;
-
-            Console.WriteLine("Minimum = " + min);
-            Console.WriteLine("Maximum = " + max);
-            Console.WriteLine("Average = " + avg);
+            a = new Cat();
+            a.Sound();
         }
     }*/
 }
-

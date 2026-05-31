@@ -1,29 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace unit_2
-{
+namespace Reekha3
+{ 
 
-    /*class Qns3
+    /*static class StringHelper
+    {
+        public static string ToUpperCase(string str)
+        {
+            return str.ToUpper();
+        }
+
+        public static string ToLowerCase(string str)
+        {
+            return str.ToLower();
+        }
+
+        public static int GetLength(string str)
+        {
+            return str.Length;
+        }
+    }
+
+    class Qns3
     {
         static void Main()
         {
-            Console.Write("Enter your name: ");
-            string name = Console.ReadLine();
+            string text = "Hello World";
 
-            Console.Write("Enter your address: ");
-            string address = Console.ReadLine();
-
-            Console.Write("Enter your email: ");
-            string email = Console.ReadLine();
-
-            Console.WriteLine("\n--- Details ---");
-            Console.WriteLine("Name: " + name);
-            Console.WriteLine("Address: " + address);
-            Console.WriteLine("Email: " + email);
+            Console.WriteLine(StringHelper.ToUpperCase(text));
+            Console.WriteLine(StringHelper.ToLowerCase(text));
+            Console.WriteLine("Length = " + StringHelper.GetLength(text));
         }
     }*/
-    
-    }
+}
 

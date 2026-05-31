@@ -1,32 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace unit_2
+namespace Reekha3
 {
-    using System;
-    /*
+
+
+    /*abstract class Department
+    {
+        public abstract void GenerateReport();
+    }
+
+    class Cardiology : Department
+    {
+        public override void GenerateReport()
+        {
+            Console.WriteLine("Cardiology patient report generated.");
+        }
+    }
+
+    class Neurology : Department
+    {
+        public override void GenerateReport()
+        {
+            Console.WriteLine("Neurology patient report generated.");
+        }
+    }
+
     class Qns8
     {
         static void Main()
         {
-            int a, b, temp;
+            Department d1 = new Cardiology();
+            Department d2 = new Neurology();
 
-            Console.Write("Enter first number: ");
-            a = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Enter second number: ");
-            b = Convert.ToInt32(Console.ReadLine());
-
-            temp = a;
-            a = b;
-            b = temp;
-
-            Console.WriteLine("After Swapping:");
-            Console.WriteLine("First = " + a);
-            Console.WriteLine("Second = " + b);
+            d1.GenerateReport();
+            d2.GenerateReport();
         }
     }*/
-
 }
-

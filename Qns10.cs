@@ -1,28 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace unit_2
+namespace Reekha3
 {
-    /*class Qns10
-        
 
+   /* class Animal
+    {
+        public void Eat()
+        {
+            Console.WriteLine("Animal eats food");
+        }
+    }
+
+    class Dog : Animal
+    {
+        public void Bark()
+        {
+            Console.WriteLine("Dog barks");
+        }
+    }
+
+    class Qns10
     {
         static void Main()
         {
-            string str, rev = "";
+            Dog d = new Dog();
 
-            Console.Write("Enter a string: ");
-            str = Console.ReadLine();
-
-            for (int i = str.Length - 1; i >= 0; i--)
-            {
-                rev += str[i];
-            }
-
-            Console.WriteLine("Reversed String: " + rev);
+            d.Eat();
+            d.Bark();
         }
     }*/
-
 }
-

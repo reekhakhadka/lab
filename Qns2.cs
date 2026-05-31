@@ -1,30 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace unit_2
+namespace Reekha3
 {
 
-    /*class Qns2
+    /*class Calculator
+    {
+        public static int Add(int a, int b)
+        {
+            return a + b;
+        }
+
+        public static int Subtract(int a, int b)
+        {
+            return a - b;
+        }
+
+        public static int Multiply(int a, int b)
+        {
+            return a * b;
+        }
+
+        public static double Divide(int a, int b)
+        {
+            return (double)a / b;
+        }
+    }
+
+    class Qns2
     {
         static void Main()
         {
-            int a, b, c, sum;
-
-            Console.Write("Enter first number: ");
-            a = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Enter second number: ");
-            b = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Enter third number: ");
-            c = Convert.ToInt32(Console.ReadLine());
-
-            sum = a + b + c;
-
-            Console.WriteLine("Sum = " + sum);
+            Console.WriteLine("Addition = " + Calculator.Add(10, 5));
+            Console.WriteLine("Subtraction = " + Calculator.Subtract(10, 5));
+            Console.WriteLine("Multiplication = " + Calculator.Multiply(10, 5));
+            Console.WriteLine("Division = " + Calculator.Divide(10, 5));
         }
     }*/
-    
-    }
-
+}
